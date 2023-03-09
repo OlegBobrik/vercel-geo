@@ -32,5 +32,5 @@ export async function middleware(request) {
   url.searchParams.set('name', currency.name)
   url.searchParams.set('languages', languages)
 
-  return NextResponse.redirect(url)
+  return NextResponse.rewrite(url)
 }
