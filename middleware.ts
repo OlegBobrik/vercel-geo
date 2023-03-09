@@ -15,9 +15,9 @@ export async function middleware(request) {
   // const country = geolocation(request).country;
 
   if (country === 'RU') {
-    url.pathname = 'https://google.com';
+    return NextResponse.redirect('https://google.com');
   } else {
-    url.pathname = 'https://www.youtube.com';
+    NextResponse.next();
   }
 
 
